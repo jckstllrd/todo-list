@@ -1,0 +1,79 @@
+html,
+body {
+  height: 100%;
+  background-color: #fffaff;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header header" "sidebar content";
+
+  grid-template-columns: minmax(175px, 2fr) minmax(300px, 6fr);
+  grid-template-rows:
+    auto
+    minmax(75px, 1fr);
+}
+
+.header {
+  color: #16262e;
+  grid-area: header;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #16262e;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-project.btn {
+  background-color: unset;
+  border: unset;
+  color: #fffaff;
+  font-size: 1.3rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  grid-area: content;
+  justify-content: center;
+  padding: 10px;
+}
+
+.btn {
+  border-radius: 5%;
+  padding: 5px;
+}
+
+.new-todo.btn {
+  font-size: 1.3rem;
+  border: unset;
+  background-color: unset;
+  color: #16262e;
+}
+.new-todo.btn:hover {
+  font-size: 1.3rem;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  color: #d8315b;
+}
