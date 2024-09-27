@@ -6,6 +6,9 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
+    client: {
+      overlay: false,
+    },
   },
 
   module: {
