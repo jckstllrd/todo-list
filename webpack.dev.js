@@ -6,6 +6,7 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
+    hot: true,
     client: {
       overlay: false,
     },
@@ -16,6 +17,10 @@ module.exports = merge(common, {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
     ],
   },
