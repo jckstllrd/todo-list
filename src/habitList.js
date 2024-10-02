@@ -1,19 +1,31 @@
+import { domController } from "./domController";
+import habit from "./habit";
+
 export default habitList = () => {
-    let habits = [];
-    let title;
-    let description;
+  let habits = [];
+  let title;
+  let description;
 
-    const createHabitList = (title, desc) => {
-        this.title = title;
-        this.description = desc;
-    }
+  const createHabitList = (title, desc) => {
+    title = title;
+    description = desc;
+  };
 
-    const addHabit = (habit) => {
-        habits.push(habit);
-    }
+  const getInfo = () => {
+    return {title, description, displayAllHabits}
+  }
 
-    return { createHabitList, addHabit }
+  const addHabit = (habit) => {
+    habits.push(habit);
+  };
 
-}
+  const displayAllHabits = () => {
+    habits.forEach((habit) => {
+      domController.displayHabit(habitList, habit);
+    });
+  };
 
-export { habitList }
+  return { createHabitList, addHabit, displayAllHabits, getInfo };
+};
+
+export { habitList };
