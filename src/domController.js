@@ -12,7 +12,7 @@ export const domController = () => {
    */
   const displayHabit = (habit) => {};
 
-  const initialiseEvents = () => {
+  const initialisePage = () => {
     const newHabitBtn = document.querySelector(".new-habit.btn");
     const newListBtn = document.querySelector(".new-list.btn");
 
@@ -21,10 +21,14 @@ export const domController = () => {
 
     newHabitBtn.addEventListener("click", () => {
       newHabitDialog.showModal();
+      console.log("opened");
+      
     });
     newListBtn.addEventListener("click", () => {
-        newListDialog.showModal();
-      });
+      newListDialog.showModal();
+      console.log("opened");
+      
+    });
   };
-  return { displayHabit, initialiseEvents}
+  return { displayHabit, initialisePage };
 };
