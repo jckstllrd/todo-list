@@ -41,14 +41,14 @@ nav {
   align-items: center;
 }
 
-.new-project.btn {
+.new-list.btn {
   background-color: unset;
   border: unset;
   color: #fffaff;
   font-size: 1.3rem;
 }
 
-.new-project.btn:hover {
+.new-list.btn:hover {
   color: #d8315b;
   box-shadow: rgb(46, 71, 86) 3px 3px 6px 0px inset,
     rgba(22, 32, 46, 0.5) -3px -3px 6px 1px inset;
@@ -71,19 +71,19 @@ nav {
   padding: 5px;
 }
 
-.new-todo.btn {
+.new-habit.btn {
   font-size: 1.3rem;
   border: unset;
   background-color: unset;
   color: #16262e;
 }
-.new-todo.btn:hover {
+.new-habit.btn:hover {
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   color: #d8315b;
 }
 
-.new-todo-dialog {
+.new-habit.dialog {
   background-color: #16262e;
   border: unset;
   border-radius: 25px;
@@ -92,7 +92,7 @@ nav {
   color: #fffaff;
 }
 
-.new-todo-dialog form {
+.new-habit.dialog form {
   display: flex;
   flex-direction: column;
   gap: 5px;
