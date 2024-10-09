@@ -1,4 +1,4 @@
 import "./styles.css";
 import { domController } from "./domController";
 
-domController.initialisePage;
+domController.loadPage();
