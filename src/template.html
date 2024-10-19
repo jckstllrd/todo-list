@@ -9,7 +9,7 @@
     <div class="header"><header>Insert Title</header></div>
     <dialog class="new-habit dialog">
       <div class="menu-header">
-        <h2>Add New Todo</h2>
+        <h2>Create New Habit</h2>
         <img
           class="close-menu btn"
           src="./res/close-button.png"
@@ -19,22 +19,21 @@
       <form>
         <div>
           <label for="title">Title</label
-          ><input type="text" name="title" id="title" />
+          ><input type="text" name="habit-title" id="title" />
         </div>
         <div>
-          <label for="description">Description</label><input type="textarea" />
+          <label for="description">Description</label><input name="habit-description" type="textarea" />
         </div>
-        <div>
-          <label for="due-date">Due Date:</label>
-        
-        <input type="date" name="due-date" id="due-date" /></div>
-        <div>
-          <label for="priority">Priority:</label
-          ><select name="priority" id="priority">
+      <div>
+          <label for="habit-type">Type:</label
+          ><select name="habit-type" id="habit-type">
             <option value="none" default>None</option>
+            <option value="low">Bad Habit</option>
+            <option value="medium">Neutral Habit</option>
+            <option value="high">Good Habit</option>
           </select>
         </div>
-        <input type="submit" value="Submit" />
+        <input type="submit" class="habit-submit" value="Submit" />
       </form>
     </dialog>
     <dialog class="new-list dialog">
