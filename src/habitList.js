@@ -1,14 +1,12 @@
 import { domController } from "./domController";
 import habit from "./habit";
 
-export default habitList = () => {
+function createHabitList (listTitle, listDesc) {
   let habits = [];
-  let title;
-  let description;
-
-  const createHabitList = (title, desc) => {
-    title = title;
-    description = desc;
+  const title = listTitle;
+  const description = listDesc;
+  const createHabitList = () => {
+    
   };
 
   const getInfo = () => {
@@ -25,7 +23,7 @@ export default habitList = () => {
     });
   };
 
-  return { createHabitList, addHabit, displayAllHabits, getInfo };
+  return { addHabit, displayAllHabits, getInfo };
 };
 
-export { habitList };
+export { createHabitList };

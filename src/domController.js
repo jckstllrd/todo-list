@@ -1,4 +1,6 @@
 import {createHabit} from "./habit";
+import { createHabitList } from "./habitList";
+
 
 const domController = (function () {
   // const displayHabit = (habit) => {};
@@ -14,13 +16,22 @@ const domController = (function () {
     console.log("habit logged");
     let newHabit = createHabit(title, desc, type);
     console.log(newHabit);
-    
-    const habitJSON = JSON.stringify(newHabit);
-    console.log(habitJSON);
 
-    localStorage.setItem(title, habitJSON);
-    console.log(localStorage.getItem(title))
   };
+
+  const extractHabitList = () => {
+    const title = document.querySelector("#list-title").value;
+    const desc = document.querySelector(
+      'input[name="list-description"]'
+    ).value;
+    console.log("list logged");
+    let newList = createHabitList(title, desc);
+  };
+
+  // const displayHabit = (habitList, habit) => {
+    
+  //   listDOM = document.querySelector
+  // }
 
   const loadPage = () => {
     console.log("here");
@@ -38,6 +49,15 @@ const domController = (function () {
       extractHabit();
       newHabitDialog.close();
     });
+
+    const newListDialogSubmit = document.querySelector(".list-submit");
+    newListtDialogSubmit.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("submitting");
+      extractHabitList();
+      newListDialog.close();
+    });
+
 
     newHabitBtn.addEventListener("click", () => {
       newHabitDialog.showModal();
